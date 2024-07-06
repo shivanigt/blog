@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="/css/form.css">
+
+<div class="blog-container">
+    <h1>Update Blog</h1>
+    <form action="/blog/update/<%= blog.id %>" method="POST" enctype="multipart/form-data" class="blog-form">
+        <input type="text" name="title" value="<%= blog.title %>" placeholder="Enter Title" class="input-field">
+        <textarea name="description" placeholder="Enter Description" class="input-field"><%= blog.description %></textarea>
+        <div class="image-preview">
+            <img src="<%= blog.blogImage %>" alt="Current Blog Image">
+        </div>
+        <input type="file" name="blogImage" placeholder="Blog Image" class="input-field">
+        <input type="submit" value="Update" class="submit-button">
+    </form>
+</div>

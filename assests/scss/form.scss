@@ -1,0 +1,62 @@
+// Variables
+$primary-color: #3498db;
+$button-bg-color: $primary-color;
+$button-text-color: #fff;
+$input-border-color: #ccc;
+
+.blog-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+
+    h1 {
+        font-size: 24px;
+        color: $primary-color;
+        margin-bottom: 20px;
+    }
+
+    .blog-form {
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid $input-border-color;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .image-preview {
+            margin-bottom: 20px;
+
+            img {
+                max-width: 100%;
+                max-height: 300px; // Adjust the maximum height as needed
+                height: auto;
+                border-radius: 5px;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        .submit-button {
+            padding: 10px 20px;
+            background-color: $button-bg-color;
+            color: $button-text-color;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: darken($button-bg-color, 10%);
+            }
+        }
+    }
+}

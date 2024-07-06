@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="/css/form.css">
+
+<div class="blog-container">
+    <%if(user.id == profile_user.id){%>
+    <h1>Update Profile</h1>
+    <form action="/users/update/<%=profile_user.id%>" method="POST" class="blog-form">
+        <input type="text" name="name" value="<%=profile_user.name%>" placeholder="Name" class="input-field">
+        <input type="email" name="email" value="<%=profile_user.email%>" placeholder="Email" class="input-field">
+        <input type="submit" value="Update" class="submit-button">
+    </form>
+    <% } %>
+</div>

@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="/css/form.css">
+
+<div class="blog-container">
+    <h1>Blog Add</h1>
+    <form action="/blog/add" method="POST" enctype="multipart/form-data" class="blog-form">
+        <input type="hidden" name="userId" value="<%= user.id%>">
+        <input type="text" name="title" placeholder="Enter Title" class="input-field">
+        <textarea name="description" placeholder="Enter Description" class="input-field"></textarea>
+        <input type="file" name="blogImage" placeholder="Blog Image" class="input-field">
+        <input type="submit" value="Add" class="submit-button">
+    </form>
+</div>

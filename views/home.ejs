@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="/css/about.css">
+
+<div class="blog-list">
+    <div class="header">
+        <h1>All Blogs</h1>
+        <% if (online) { %>
+        <div class="user-info">
+            <a href="/blog/add/" class="add-blog-link">
+                <i class="fas fa-plus-circle"></i> Add Blog
+            </a>
+        </div>
+        <% } %>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Sr</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Images</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let i = 0; i < all_blogs.length; i++) { %>
+            <tr>
+                <td><%= i + 1 %></td>
+                <td><%= all_blogs[i].title %></td>
+                <td>
+                    <div class="description">
+                        <%= all_blogs[i].description.slice(0, 50) %> <%= all_blogs[i].description.length > 50 ? '...' : '' %>
+                    </div>
+                </td>
+                <td><img src="<%= all_blogs[i].blogImage %>" alt=""></td>
+                <td>
+                    <% if (online) { %>
+                    <% if (all_blogs[i].userId == user.id) { %>
+                    <a href="/blog/update/<%= all_blogs[i].id %>"><i class="fas fa-edit"></i>Edit</a>
+                    <a href="javascript:void(0);" onclick="confirmDelete('<%= all_blogs[i]._id %>')"><i class="fas fa-trash-alt"></i> Remove</a>
+                    <% } %>
+                    <a href="/blog/show/<%= all_blogs[i].id %>"><i class="fas fa-eye"></i>Show</a>
+                    <% } %>
+                </td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+</div>
+
+
+
+
+<script src="/js/script.js"></script>

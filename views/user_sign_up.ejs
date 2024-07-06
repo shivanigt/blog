@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="/css/form.css">
+
+<div class="blog-container">
+    <h1>Sign Up</h1>
+    <form action="/users/signup" method="POST" enctype="multipart/form-data" class="blog-form">
+        <input class="input-field" type="text" name="name" placeholder="Name" required>
+        <input class="input-field" type="email" name="email" placeholder="Email" required>
+        <input class="input-field" type="password" name="password" placeholder="Password" required>
+        <input class="input-field" type="password" name="confirm_password" placeholder="Confirm-password" required>
+        <input type="file" name="profileImage" placeholder="Profile Image" class="input-field">
+        <input type="submit" value="Sign Up" class="submit-button">
+    </form>
+</div>

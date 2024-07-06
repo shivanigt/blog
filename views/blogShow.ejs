@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="/css/blogShow.css">
+
+<div class="blog-details">
+    <div class="header">
+        <h1><%= blog.title %></h1>
+        <p class="timestamp">Updated: <%= blog.updatedAt.toDateString() %></p>
+    </div>
+    <div class="content">
+        <div class="image-container">
+            <img src="<%= blog.blogImage %>" alt="<%= blog.title %>">
+        </div>
+        <div class="description">
+            <p><%= blog.description %></p>
+        </div>
+    </div>
+    <div class="author">
+        <h3>Author: <%= name %></h3>
+    </div>
+</div>

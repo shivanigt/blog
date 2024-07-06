@@ -1,0 +1,18 @@
+<header>
+    <div class="container">
+        <div class="logo">
+            <a href="/">Blog</a>
+        </div>
+        <div class="auth-links">
+            <% if(locals.user) { %> 
+                <span class="user-info">
+                    <%= user.name %>
+                </span>
+                <a href="/users/sign-out">Sign-out</a>
+            <% } else { %>
+                <a href="/users/sign-in">Sign-in</a>
+                <a href="/users/sign-up">Sign-up</a>
+            <% } %>
+        </div>
+    </div>
+</header>

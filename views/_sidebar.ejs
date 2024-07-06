@@ -1,0 +1,21 @@
+<div class="sidebar-container">
+    <% if (online) { %>
+        <div class="profile-card">
+            <div class="profile-image-container">
+                <img src="<%= user.profileImage %>" alt="<%= user.name %>" class="profile-image">
+            </div>
+            <div class="profile-info">
+                <p class="profile-name"><%= user.name %></p>
+                <p class="profile-email"><%= user.email %></p>
+            </div>
+        </div>
+        <br>
+        <div class="sign-in-message">
+            <a href="/users/about/<%=user.id%>" class="sign-in-button">Update Profile</a>
+        </div>
+    <% } else { %>
+        <div class="sign-in-message">
+            <p>Please <a href="/users/sign-in" class="sign-in-button">sign in</a> to view your profile.</p>
+        </div>
+    <% } %>
+</div>
